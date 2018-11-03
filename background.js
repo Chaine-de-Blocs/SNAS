@@ -19,8 +19,20 @@ function updateList() {
 
   xhr.open('GET', getTrustedURI(), true);
   xhr.onload = function(e) {
+    // No results, check with another host
+    if (!this.response || JSON.stringify(this.response) === JSON.stringify({})) {
+      updateList();
+      return;
+    }
+
     chrome.storage.sync.set({scamscan: this.response});
   };
+
+  xhr.onerror = function(err) {
+    console.log(err);
+    updateList();
+  }
+
   xhr.send();
 }
 

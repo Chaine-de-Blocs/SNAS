@@ -1,6 +1,6 @@
 {
   "name": "SNAS Not a Scam",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Avoid the scammers, be a scanner",
   "permissions": [
     "tabs", "activeTab", "declarativeContent", "storage",
