@@ -2,21 +2,22 @@
 
 A Chrome extension that warns the user if a website is a scam.
 
-## Data list format
+## Data list format ([example](https://github.com/Slaals/slaals.github.io/blob/master/assets/scamscan.json))
 ```javascript
 {
   // Key for matching the scam's website
   // can have a subdomain, avoid adding a path
   // We're only looking for hostname here
-  scamHost: string;
+  [scamHost: string] : {
+    // The source that listed the website for being a scam with proofs
+    source: string;
 
-  // The source that listed the website for being a scam with proofs
-  source: string;
+    // Recommend other certified websites
+    // This extension is not for advertisement, so the list has to be as exhaustive
+    // as possible
+    recommendations?: string[];
+  }
 
-  // Recommend other certified websites
-  // This extension is not for advertisement, so the list has to be as exhaustive
-  // as possible
-  recommendations?: string[];
 }
 ```
 
@@ -30,4 +31,4 @@ Cryptoblocs : https://cryptoblocs.fr/assets/scamscan.json
 
 Feel free to make a PR and to fill an issue.
 
-If your want to add websites to the list, PR [this](https://github.com/Slaals/slaals.github.io/blob/master/assets/scamscan.json). 
+If your want to add websites to the list, PR [this](https://github.com/Slaals/slaals.github.io/blob/master/assets/scamscan.json).
