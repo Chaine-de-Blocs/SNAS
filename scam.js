@@ -2,7 +2,7 @@
 
 function displayRecommendations(recommendations) {
   if (recommendations && recommendations.length > 0) {
-    let res = '<p>Voici nos recommendations proposant un service similaire à ce que vous cherchez : <ul>';
+    let res = '<p>Voici nos recommendations proposant un service similaire à ce que vous cherchez :</p> <ul>';
     recommendations.map((reco) => res += `<li><a href="${reco}">${reco}</a></li>`);
     return res + '</ul>';
   }
