@@ -25,7 +25,7 @@ You would like new fields? Please fill an issue [here](https://github.com/Chaine
 
 ## Trusted URIs
 
-Cryptoblocs : https://cryptoblocs.fr/assets/scamscan.json
+Cryptoblocs : https://cryptoblocs.fr/assets/scamscan.json ([contribute to the list](https://github.com/Slaals/slaals.github.io/blob/master/assets/scamscan.json))
 
 ## Contribute
 
